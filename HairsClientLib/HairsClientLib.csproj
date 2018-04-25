@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9243BE69-7D4D-4501-B149-3A9F9692656C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HairsClientLib</RootNamespace>
+    <AssemblyName>HairsClientLib</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsyncConnection.cs" />
+    <Compile Include="Controller\AccesRightsController.cs" />
+    <Compile Include="Controller\CommentToVisControl.cs" />
+    <Compile Include="Controller\CommentTypeControl.cs" />
+    <Compile Include="Controller\ConfigControl.cs" />
+    <Compile Include="Controller\ConfigSizeHaiControl.cs" />
+    <Compile Include="Controller\ConfigStaticNormControl.cs" />
+    <Compile Include="Controller\ContactsController.cs" />
+    <Compile Include="Controller\DiagnosControl.cs" />
+    <Compile Include="Controller\FieldTypeControl.cs" />
+    <Compile Include="Controller\FieldVariantControl.cs" />
+    <Compile Include="Controller\GenderControl.cs" />
+    <Compile Include="Controller\HairControl.cs" />
+    <Compile Include="Controller\ImageControl.cs" />
+    <Compile Include="Controller\ObjectivControl.cs" />
+    <Compile Include="Controller\PatientController.cs" />
+    <Compile Include="Controller\PhotoControl.cs" />
+    <Compile Include="Controller\ReportFieldControl.cs" />
+    <Compile Include="Controller\ResearchControl.cs" />
+    <Compile Include="Controller\ResearchStatusControl.cs" />
+    <Compile Include="Controller\ReportTemplControl.cs" />
+    <Compile Include="Controller\ResearchTypeControl.cs" />
+    <Compile Include="Controller\StatusPatientController.cs" />
+    <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Controller\VisitControl.cs" />
+    <Compile Include="EFContext.cs" />
+    <Compile Include="Interfaces\iAccesRight.cs" />
+    <Compile Include="Interfaces\iComentaryToVisit.cs" />
+    <Compile Include="Interfaces\iComentaryType.cs" />
+    <Compile Include="Interfaces\iConfigs.cs" />
+    <Compile Include="Interfaces\iConfigSize.cs" />
+    <Compile Include="Interfaces\iConfigStaticNorm.cs" />
+    <Compile Include="Interfaces\iContacts.cs" />
+    <Compile Include="Interfaces\iDiagnos.cs" />
+    <Compile Include="Interfaces\iFieldType.cs" />
+    <Compile Include="Interfaces\iFieldVariant.cs" />
+    <Compile Include="Interfaces\iGender.cs" />
+    <Compile Include="Interfaces\iHair.cs" />
+    <Compile Include="Interfaces\iImageLogo.cs" />
+    <Compile Include="Interfaces\iObjectives.cs" />
+    <Compile Include="Interfaces\iPatient.cs" />
+    <Compile Include="Interfaces\iPatientStatus.cs" />
+    <Compile Include="Interfaces\iPhoto.cs" />
+    <Compile Include="Interfaces\iReportField.cs" />
+    <Compile Include="Interfaces\iReportTemplate.cs" />
+    <Compile Include="Interfaces\iResearch.cs" />
+    <Compile Include="Interfaces\iResearchStatus.cs" />
+    <Compile Include="Interfaces\iResearchType.cs" />
+    <Compile Include="Interfaces\iUser.cs" />
+    <Compile Include="Interfaces\iVisit.cs" />
+    <Compile Include="Lib\AccesRight.cs" />
+    <Compile Include="Lib\CommentaryToVisit.cs" />
+    <Compile Include="Lib\CommentaryType.cs" />
+    <Compile Include="Lib\ConfigHair.cs" />
+    <Compile Include="Lib\ConfigHairSize.cs" />
+    <Compile Include="Lib\ConfigStaticNormales.cs" />
+    <Compile Include="Lib\ContactS.cs" />
+    <Compile Include="Lib\Diagnoses.cs" />
+    <Compile Include="Lib\FieldType.cs" />
+    <Compile Include="Lib\FieldVariants.cs" />
+    <Compile Include="Lib\GenderS.cs" />
+    <Compile Include="Lib\Hair.cs" />
+    <Compile Include="Lib\ImageLogo.cs" />
+    <Compile Include="Lib\Objectives.cs" />
+    <Compile Include="Lib\Patient.cs" />
+    <Compile Include="Lib\Photoses.cs" />
+    <Compile Include="Lib\Reportfield.cs" />
+    <Compile Include="Lib\ReportTemplate.cs" />
+    <Compile Include="Lib\Research.cs" />
+    <Compile Include="Lib\ResearchStatus.cs" />
+    <Compile Include="Lib\ResearchType.cs" />
+    <Compile Include="Lib\StatusesForPatient.cs" />
+    <Compile Include="Lib\User.cs" />
+    <Compile Include="Lib\Visit.cs" />
+    <Compile Include="Migrations\201804231925307_Add-all.cs" />
+    <Compile Include="Migrations\201804231925307_Add-all.Designer.cs">
+      <DependentUpon>201804231925307_Add-all.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231933107_Add-all2.cs" />
+    <Compile Include="Migrations\201804231933107_Add-all2.Designer.cs">
+      <DependentUpon>201804231933107_Add-all2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231935114_Add-all3.cs" />
+    <Compile Include="Migrations\201804231935114_Add-all3.Designer.cs">
+      <DependentUpon>201804231935114_Add-all3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231940505_Add-all4.cs" />
+    <Compile Include="Migrations\201804231940505_Add-all4.Designer.cs">
+      <DependentUpon>201804231940505_Add-all4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231942205_Add-all5.cs" />
+    <Compile Include="Migrations\201804231942205_Add-all5.Designer.cs">
+      <DependentUpon>201804231942205_Add-all5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231945310_Add-all6.cs" />
+    <Compile Include="Migrations\201804231945310_Add-all6.Designer.cs">
+      <DependentUpon>201804231945310_Add-all6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231946082_Add-all7.cs" />
+    <Compile Include="Migrations\201804231946082_Add-all7.Designer.cs">
+      <DependentUpon>201804231946082_Add-all7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231956599_Add-all9.cs" />
+    <Compile Include="Migrations\201804231956599_Add-all9.Designer.cs">
+      <DependentUpon>201804231956599_Add-all9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231959061_Add-all10.cs" />
+    <Compile Include="Migrations\201804231959061_Add-all10.Designer.cs">
+      <DependentUpon>201804231959061_Add-all10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804232019080_Add-all11.cs" />
+    <Compile Include="Migrations\201804232019080_Add-all11.Designer.cs">
+      <DependentUpon>201804232019080_Add-all11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804240523589_Add-all13.cs" />
+    <Compile Include="Migrations\201804240523589_Add-all13.Designer.cs">
+      <DependentUpon>201804240523589_Add-all13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804240716240_Add-all145.cs" />
+    <Compile Include="Migrations\201804240716240_Add-all145.Designer.cs">
+      <DependentUpon>201804240716240_Add-all145.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804240718095_Add-all1434.cs" />
+    <Compile Include="Migrations\201804240718095_Add-all1434.Designer.cs">
+      <DependentUpon>201804240718095_Add-all1434.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804240726011_Add-all1122.cs" />
+    <Compile Include="Migrations\201804240726011_Add-all1122.Designer.cs">
+      <DependentUpon>201804240726011_Add-all1122.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804240729156_Add-all11222.cs" />
+    <Compile Include="Migrations\201804240729156_Add-all11222.Designer.cs">
+      <DependentUpon>201804240729156_Add-all11222.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804240743284_Add-all112222.cs" />
+    <Compile Include="Migrations\201804240743284_Add-all112222.Designer.cs">
+      <DependentUpon>201804240743284_Add-all112222.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804240746097_Add-all1122222.cs" />
+    <Compile Include="Migrations\201804240746097_Add-all1122222.Designer.cs">
+      <DependentUpon>201804240746097_Add-all1122222.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804240747107_Add-all11222222.cs" />
+    <Compile Include="Migrations\201804240747107_Add-all11222222.Designer.cs">
+      <DependentUpon>201804240747107_Add-all11222222.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804240753313_Add-all112222222.cs" />
+    <Compile Include="Migrations\201804240753313_Add-all112222222.Designer.cs">
+      <DependentUpon>201804240753313_Add-all112222222.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804240802361_Add-all0.cs" />
+    <Compile Include="Migrations\201804240802361_Add-all0.Designer.cs">
+      <DependentUpon>201804240802361_Add-all0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804240805597_Add-all02.cs" />
+    <Compile Include="Migrations\201804240805597_Add-all02.Designer.cs">
+      <DependentUpon>201804240805597_Add-all02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804241109537_update2.cs" />
+    <Compile Include="Migrations\201804241109537_update2.Designer.cs">
+      <DependentUpon>201804241109537_update2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804241150089_update23.cs" />
+    <Compile Include="Migrations\201804241150089_update23.Designer.cs">
+      <DependentUpon>201804241150089_update23.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804241206247_update232.cs" />
+    <Compile Include="Migrations\201804241206247_update232.Designer.cs">
+      <DependentUpon>201804241206247_update232.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804241527511_update2323.cs" />
+    <Compile Include="Migrations\201804241527511_update2323.Designer.cs">
+      <DependentUpon>201804241527511_update2323.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201804231925307_Add-all.resx">
+      <DependentUpon>201804231925307_Add-all.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231933107_Add-all2.resx">
+      <DependentUpon>201804231933107_Add-all2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231935114_Add-all3.resx">
+      <DependentUpon>201804231935114_Add-all3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231940505_Add-all4.resx">
+      <DependentUpon>201804231940505_Add-all4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231942205_Add-all5.resx">
+      <DependentUpon>201804231942205_Add-all5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231945310_Add-all6.resx">
+      <DependentUpon>201804231945310_Add-all6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231946082_Add-all7.resx">
+      <DependentUpon>201804231946082_Add-all7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231956599_Add-all9.resx">
+      <DependentUpon>201804231956599_Add-all9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231959061_Add-all10.resx">
+      <DependentUpon>201804231959061_Add-all10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804232019080_Add-all11.resx">
+      <DependentUpon>201804232019080_Add-all11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804240523589_Add-all13.resx">
+      <DependentUpon>201804240523589_Add-all13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804240716240_Add-all145.resx">
+      <DependentUpon>201804240716240_Add-all145.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804240718095_Add-all1434.resx">
+      <DependentUpon>201804240718095_Add-all1434.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804240726011_Add-all1122.resx">
+      <DependentUpon>201804240726011_Add-all1122.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804240729156_Add-all11222.resx">
+      <DependentUpon>201804240729156_Add-all11222.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804240743284_Add-all112222.resx">
+      <DependentUpon>201804240743284_Add-all112222.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804240746097_Add-all1122222.resx">
+      <DependentUpon>201804240746097_Add-all1122222.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804240747107_Add-all11222222.resx">
+      <DependentUpon>201804240747107_Add-all11222222.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804240753313_Add-all112222222.resx">
+      <DependentUpon>201804240753313_Add-all112222222.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804240802361_Add-all0.resx">
+      <DependentUpon>201804240802361_Add-all0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804240805597_Add-all02.resx">
+      <DependentUpon>201804240805597_Add-all02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804241109537_update2.resx">
+      <DependentUpon>201804241109537_update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804241150089_update23.resx">
+      <DependentUpon>201804241150089_update23.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804241206247_update232.resx">
+      <DependentUpon>201804241206247_update232.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804241527511_update2323.resx">
+      <DependentUpon>201804241527511_update2323.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
